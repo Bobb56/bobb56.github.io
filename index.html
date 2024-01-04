@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+  <head><!-- définit toutes les informations relatives à la page -->
+
+    <meta charset="utf-8">
+
+    <title>Neon en ligne</title><!-- titre de la page -->
+
+  <link rel="icon" href="Neon.png" />
+  <script src="script.js"></script>
+  <script src="neon.js"></script>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  
+  </head>
+
+  <h1><neon1>Ne</neon1><neon2>on</neon2> en ligne</h1> <!-- titre -->
+  
+  
+  <body background="#99f4ff">
+
+  <div class="boutons"> <!-- boutons de la ligne du haut -->
+    <div class="fichiers">
+      <input type="file" id="fileInput">
+      <input type="button" id="downloadButton" value="Télécharger" onclick="download()">
+      <a id="downloadLink" style="display: none;"></a>
+    </div>
+  
+    <div class="boutonsConsole">
+      <!-- boutons au dessus de la console -->
+      <input type="button" id="clear" value="Vider la console" onclick="clear_console()">
+      <input type="button" id="init" value="Redémarrer l'interpréteur" onclick="neon_init()">
+    </div>
+  </div>
+
+    
+  <div class = "container"> <!-- ensemble texte-bouton-console -->
+
+    <textarea rows="5" cols="100" id="entree" placeholder="Entrez du code ici...">print("Hello, World !")</textarea>
+    <center><input type="button" id="valider" value="Exécuter" onclick="ok_button()"></center>
+    <textarea rows="5" cols="100" id="console" wrap="hard" readonly ></textarea>
+  
+  </div>
+
+    <br>
+
+    <div class="bas">
+      <h4>
+      <input type="checkbox" id="keep_code" checked onclick="keep_code()">
+      Conserver le code après exécution
+      </h4>
+
+      <h6>Version 2.11.36.2-beta</h6>
+    </div>
+
+    
+    <script src="fichiers.js"></script> <!-- charge le script servant aux fichiers après la défninition des boutons ! -->
+  
+
+  </body>
+
+</html>

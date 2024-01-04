@@ -1,0 +1,6 @@
+result=window.prompt("Input: ")
+if (canInput){result=window.prompt("Entrez du texte :");canInput = false;}else{result = null;canInput = true;}
+
+
+Module["print"]||console.log.bind(console)
+_print_
