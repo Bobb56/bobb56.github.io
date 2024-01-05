@@ -36,27 +36,25 @@
     
   <div class = "container"> <!-- ensemble texte-bouton-console -->
 
-    <textarea rows="5" cols="100" id="entree" placeholder="Entrez du code ici...">
-      function is_prime(n) do
-        if (n <= 1) then
-            return (False)
-        end
-        
-        for (i, 2, 1 + n ** 0.5) do
-            if (n % i == 0) then
-                return (False)
-            end
-        end
-        return (True)
+    <textarea rows="5" cols="100" id="entree" placeholder="Entrez du code ici...">function is_prime(n) do
+  if (n <= 1) then
+      return (False)
+  end
+  
+  for (i, 2, 1 + n ** 0.5) do
+      if (n % i == 0) then
+          return (False)
       end
-    
-    
-      for (n,1,10000) do
-          if (is_prime(n)) do
-              print(n, "is a prime number.")
-          end
-      end
-    </textarea>
+  end
+  return (True)
+end
+
+
+for (n,1,10000) do
+    if (is_prime(n)) do
+        print(n, "is a prime number.")
+    end
+end</textarea>
     <center><input type="button" id="valider" value="Exécuter" onclick="ok_button()"></center>
     <textarea rows="5" cols="100" id="console" wrap="hard" readonly ></textarea>
   
